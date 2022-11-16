@@ -32,6 +32,7 @@ import {
 } from "react-router-dom";
 import Background from './components/background/Background';
 import Home from './components/home/Home';
+import Temp from './components/temp/temp';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
                 <Redirect to="/home" /> 
               </Route>
               <Route exact path="/background"> <Background/> </Route>
+              <Route exact path="/moni"> <Temp/> </Route>
           </Switch>
         </div>
       </section>
