@@ -25,10 +25,10 @@ import './template_css/haur_custom.css';
 // Components
 import HeaderPage from './components/HeaderPage.js'
 import {
-  BrowserRouter as Router,
+  HashRouter,
+  BrowserRouter,
   Switch,
-  Route,
-  Redirect
+  Route
 } from "react-router-dom";
 import Background from './components/background/Background';
 import Home from './components/home/Home';
@@ -37,23 +37,22 @@ import Temp from './components/temp/temp';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div>
           <HeaderPage></HeaderPage>
       </div>
       <section class="home_banner_area">
         <div class="container box_1620">
+        <HashRouter basename="/">
           <Switch>
-              <Route exact path="/home"> <Home/> </Route>
-              <Route exact path="/">
-                <Redirect to="/home" /> 
-              </Route>
+              <Route exact path="/"> <Home/> </Route>
               <Route exact path="/background"> <Background/> </Route>
               <Route exact path="/moni"> <Temp/> </Route>
           </Switch>
+        </HashRouter> 
         </div>
       </section>
-    </Router> 
+    </BrowserRouter> 
   );
 }
 
