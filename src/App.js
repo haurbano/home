@@ -32,7 +32,7 @@ import {
 } from "react-router-dom";
 import Background from './components/background/Background';
 import Home from './components/home/Home';
-import Temp from './components/temp/Temp';
+import Temp from './components/temp/temp';
 
 
 function App() {
