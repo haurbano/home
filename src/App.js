@@ -37,19 +37,17 @@ import Temp from './components/temp/temp';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/home">
       <div>
           <HeaderPage></HeaderPage>
       </div>
       <section class="home_banner_area">
         <div class="container box_1620">
-        <HashRouter basename="/">
           <Switch>
               <Route exact path="/"> <Home/> </Route>
               <Route exact path="/background"> <Background/> </Route>
               <Route exact path="/moni"> <Temp/> </Route>
-          </Switch>
-        </HashRouter> 
+          </Switch> 
         </div>
       </section>
     </BrowserRouter> 
