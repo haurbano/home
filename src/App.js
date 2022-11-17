@@ -37,7 +37,7 @@ import Temp from './components/temp/temp';
 
 function App() {
   return (
-    <BrowserRouter  basename="/home">
+    <BrowserRouter basename='home'>
       <div>
           <HeaderPage></HeaderPage>
       </div>
